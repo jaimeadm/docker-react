@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t jaimeadm/docker-react -f Dockefile.dev .
+  - docker build -t jaimeadm/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true jaimeadm/docker-react npm run test
